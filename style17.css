@@ -1,0 +1,60 @@
+body{
+    
+}
+@keyframes example {
+    from {background:radial-gradient(skyblue,yellow);}
+    to {background: radial-gradient(skyblue,white);}
+}
+.modified{
+    background: radial-gradient(skyblue,white);
+    animation-name: example;
+    animation-duration: 4s;}
+
+
+.border{
+    border-top: 5px dotted slategray;
+}
+.edit{
+margin-top: -3px;
+    background-color: cornflowerblue;
+    color:lavenderblush;
+
+}
+.value-set{
+    border-radius: 4px;
+    margin-left: 5px;
+    
+    height: 35px;
+    background-color: aliceblue;
+    color: midnightblue;
+    
+}
+.well-modified{
+   border-radius: 6px;
+    background: linear-gradient(pink,beige);
+}
+.customed {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btn-modified{
+    width:100px;
+    transition:  width 5s;
+}
+
+.btn-modified:hover{
+    background-color: palevioletred;
+    transform: rotate(10deg);
+    width:150px;
+}
+.pending{
+    color:coral;
+    font-family:cursive;
+    font-size: 20px;
+}
+.task-pending{
+    box-shadow: 3px 3px blue;
+    
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cemk replica page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style17.css">
+    <script src="script2.js"></script>
+
+</head>
+    <body>
+        <div class="container modified">
+            <div class="row">
+                <div class="col-md-9">
+                    <h3>What To Do</h3>
+                    <form>
+                    <input type="text" class="form-control" placeholder="ex- Buy a MacBook" name="name" id="element">
+                    <button type="button" class="btn btn-success btn-modified" onclick="addElement()"style="margin-top: 10px;">Add Now</button>
+                        <br>
+                        
+                       
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="pending" id="pendingtasks" value="Shreetoma">No of pending Task</label> 
+                        <label class="pending" id="pendingtask" value="Shreetoma"style="margin-left: 20px;">0</label>
+                    <h4>Check your To Do list</h4>
+                    <hr class="border">
+                    <div class="well well-modified">
+                        <div class="row">
+                            <ul id="tasks">
+
+        
+      </ul>
+                        </div>
+                </div>
+                    </div>
+                <div class="col-md-6">
+                     <label class="pending"  value="Shreetoma">No of completed Task</label> 
+                        <label class="pending " id="completedtask" value="Shreetoma"style="margin-left: 20px;">0</label> 
+                    <h4>Check your Completed task</h4>
+                    <hr class="border">
+                    <div class="well well-modified">
+                        <div class="row">
+                            <ul id="taskscompleted">
+
+        
+      </ul>
+                        </div>
+                </div>
+                    
+                    </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
