@@ -1,3 +1,6 @@
+var pending=0;
+var completed=0;
+
 function addElement(){
     
     var input = document.getElementById("element").value;
@@ -86,10 +89,15 @@ var cmplt=function completeTask(){
 
 }
 function pendingTask(){
-     var pending=(document.getElementById("tasks").getElementsByTagName("li").length);
+    pending=(document.getElementById("tasks").getElementsByTagName("li").length);
     document.getElementById("pendingtask").innerHTML=pending;
 }
 function completedTask(){
-    var completed=(document.getElementById("taskscompleted").getElementsByTagName("li").length);
+    completed=(document.getElementById("taskscompleted").getElementsByTagName("li").length);
     document.getElementById("completedtask").innerHTML=completed;
+}
+function taskDefault(){
+    alert("Hello Shreetoma!!.. Start ur todo..");
+ document.getElementById("pendingtask").innerHTML=pending;
+document.getElementById("completedtask").innerHTML=completed;
 }
