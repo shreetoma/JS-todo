@@ -137,32 +137,53 @@ function storage(){
      document.getElementById("store").innerHTML= "Welcome back   " + localStorage.name;
 }
 function weather (){
-    var url = 'http://api.apixu.com/v1/current.json?key=23319fb777b04d468cc173118173112&q=Pune'
+    
+    // The Url from Which We Will Fetch data from Back end .. It send response in JSON Format
+    
+    var url = 'http://api.apixu.com/v1/current.json?key=23319fb777b04d468cc173118173112&q='+ document.getElementById("city").value;
     fetch(url)
   .then((resp) => resp.json())
   .then(function(data) {
         
-        console.log(data.current);
+        
+        //Check Response
+        console.log(data);
        
         //console.log(document.getElementById("weatherUl").hasChildNodes);
         
         var u=document.createElement("li");
-        var location= document.createElement("span");
-        var condition= document.createElement("span");
-        var condition1= document.createElement("span");
-        var temp= document.createElement("span");
-        var humidity= document.createElement("span");
-        var label2=document.createElement("label");
-        location.innerText=data.current;
+        var location= document.createElement("h4");
+        var condition= document.createElement("h4");
+        var condition1= document.createElement("img");
+        var temp= document.createElement("h4");
+        var humidity= document.createElement("h4");
+        var label2=document.createElement("h4");
+        location.innerText=data.location.name;
         condition.innerText=data.current.condition.text;
-        condition1.innerText=data.current.condition.icon;
+        
+        
+        
+        condition1.src=data.current.condition.icon;
         temp.innerText=data.current.temp_c;
         humidity.innerText=data.current.humidity;
+        u.appendChild(location);
         u.appendChild(condition);
          u.appendChild(condition1);
          u.appendChild(temp);
          u.appendChild(humidity);
         document.getElementById("weather").appendChild(u);
+        
+        if(document.getElementById("weather").hasChildNodes)
+            {
+               
+        document.getElementById("weather").replaceChild(u,document.getElementById("weather").firstChild);
+            }
+        
+        else{
+            document.getElementById("weather").appendChild(u);
+        }
+        
+    
         
     
     })
@@ -170,5 +191,7 @@ function weather (){
   .catch(function(error) {
         
     console.log(error);
+        alert("invalid");
+         document.getElementById("weather").innerHTML="";
   });  
 }
