@@ -12,24 +12,47 @@
     <script src="script2.js"></script>
 
 </head>
-    <body onload="taskDefault">
+    <body onload="startTime()">
         <div class="container modified">
             <div class="row">
+                 <h1 id="store" style="margin-left: 10px;">User</h1>
+                
                 <div class="col-md-9">
-                    <h3>What To Do</h3>
+                    <h2 class="weather">Weather of your location</h2>
+                        <input type="text" class="form-control" placeholder="ex- Kolkata" name="name" id="city"></div>
+                
+                <div class="col-md-3">
+                 <button type="button" class="btn btn-success btn-modified" onclick="weather()" style="margin-top: 60px;">Search</button></div>
+            
+                  </div>
+            <div class="row">
+                <div class="col-md-12">
+                <ul id="weather">
+                    
+                </ul>
+                    </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-9">
+                   
+                     <h3>What To Do</h3>
                     <form>
                     <input type="text" class="form-control" placeholder="ex- Buy a MacBook" name="name" id="element">
                     <button type="button" class="btn btn-success btn-modified" onclick="addElement()"style="margin-top: 10px;">Add Now</button>
                         <br>
                         
-                       
                     </form>
                 </div>
-            </div>
+                <div class="col-md-1"></div>
+               
+            <div class="col-md-2 pull-right clock" id="clock"></div>
+                </div>
+            
             <div class="row">
                 <div class="col-md-6">
                     <label class="pending" id="pendingtasks" value="Shreetoma">No of pending Task</label> 
-                        <label class="pending" id="pendingtask" value="Shreetoma"style="margin-left: 20px;"></label>
+                        <label class="pending" id="pendingtask" value="Shreetoma"style="margin-left: 20px;">0</label>
                     <h4>Check your To Do list</h4>
                     <hr class="border">
                     <div class="well well-modified">
@@ -43,7 +66,7 @@
                     </div>
                 <div class="col-md-6">
                      <label class="pending"  value="Shreetoma">No of completed Task</label> 
-                        <label class="pending " id="completedtask" value="Shreetoma"style="margin-left: 20px;"></label> 
+                        <label class="pending " id="completedtask" value="Shreetoma"style="margin-left: 20px;">0</label> 
                     <h4>Check your Completed task</h4>
                     <hr class="border">
                     <div class="well well-modified">

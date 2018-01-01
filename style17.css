@@ -5,6 +5,11 @@ body{
     from {background:radial-gradient(skyblue,yellow);}
     to {background: radial-gradient(skyblue,white);}
 }
+.weather{
+    font-family:sans-serif;
+    font-weight: bold;
+    color:firebrick;
+}
 .modified{
     background: radial-gradient(skyblue,white);
     animation-name: example;
@@ -57,4 +62,33 @@ margin-top: -3px;
 .task-pending{
     box-shadow: 3px 3px blue;
     
+}
+.clock{
+    color:crimson;
+    font-size: 25px;
+   margin-top: 10px;
+}
+@media screen and (max-width:480px)
+{
+	.modified{
+	background: radial-gradient(blue,white);	
+	}
+	
+	.btn-modified
+	{
+		background-color:blueviolet;
+		border:1px solid black; 
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+		color: #FFFFFF;	
+	}
+
+}
+
+@media screen and (min-width:481px)
+{
+	.btn-modified
+	{
+		
+		
+	}
 }
